@@ -1,12 +1,12 @@
 require('dotenv').config()
 const express = require('express');
 const bodyParser = require("body-parser");
-const ejs = require("ejs");
+// const ejs = require("ejs");
 const mongoose = require('mongoose');
 
 const app = express();
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -26,7 +26,7 @@ const Article = mongoose.model("Article", articleSchema)
 
 
 app.get('/', (req, res) => {
-    res.send('<h1>Welcome to the Coding Wiki API</h1>')
+    res.send('<h1>Welcome To My API</h1>')
 })
 
 // Request for all articles, GET all articles, POST to all articles, DELETE all articles
